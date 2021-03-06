@@ -432,9 +432,39 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <form class="form-appointment">
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name">
+            <form class="form-order">
+                <p class="form-header">Оставьте свои данные, мы вам перезвоним</p>
+
+                <div class="input-forms">
+                    <div class="form-field">
+                        <label class="input-label" for="name">Имя</label>
+                        <input class="input-area" type="text" name="name" id="name">
+                    </div>
+                    
+                    <div class="form-field">
+                        <label class="input-label" for="tel">Телефон</label>
+                        <input class="input-area" type="tel" name="tel" id="tel">
+                    </div>
+                    
+                    <div class="form-field">
+                        <label class="input-label" for="email">Почта</label>
+                        <input class="input-area" type="email" name="email" id="email">
+                    </div>
+                    
+                    <div class="form-field">
+                        <label class="input-label" for="comment">Комментарий</label>
+                        <textarea class="input-area textarea" name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+                    </div>
+
+                </div>
+                    
+                <div class="checkbox-policy">
+                    <input class="checkbox" type="checkbox" name="policy" id="policy">
+                    <label class="policy-text" for="policy">Соглашаюсь с рассылкой и принимаю <a class="policy-link">Условия договора</a></label>
+                </div>
+                
+
+                <button class="button-submit" type="submit">Отправить</button>
             </form>
             <button class="close-button" data-modal-close>
                 <svg class="icon" width="11" height="11">

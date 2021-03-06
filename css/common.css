@@ -265,9 +265,9 @@ a,
 
 .modal {
   position: absolute;
-  max-width: 528px;
-  width: 100%;
-  min-height: 100vh;
+  max-width: 100%;
+  /* width: 100%; */
+  /* min-height: 100vh; */
   left: 50%;
   top: 50%;
   overflow-y: auto;
@@ -278,9 +278,6 @@ a,
 
   transform: translate(-50%, -50%) scale(1);
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Добавить после наполенияи контентом */
-  /* overflow-y: auto; */
 }
 
 .modal > .close-button {
@@ -297,10 +294,137 @@ a,
   border-radius: 50%;
   margin-top: 8px;
   margin-right: 8px;
+  cursor: pointer;
 }
 
-.form-appointment {
-  outline: 1px solid green;
+.form-order {
+  width: 448px;
+  /* outline: 1px solid green; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-header {
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-title-color);
+}
+
+.input-forms {
+  margin-bottom: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  /* outline: 1px solid tomato; */
+}
+
+.form-field:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.input-label {
+  margin-bottom: 4px;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.input-area {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.input-area:hover,
+.input-area:focus,
+.input-area:active {
+  border-color: #2196f3;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-area.textarea {
+  height: 120px;
+  padding: 12px 16px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea {
+  resize: none;
+}
+
+.checkbox-policy {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.policy-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.checkbox-policy a {
+  text-decoration: underline;
+  color: var(--alt-logo-color);
+}
+
+.checkbox-policy a:hover {
+  color: var(--alt-logo-color);
+  cursor: pointer;
+}
+
+.checkbox-policy > .checkbox {
+  margin-right: 7px;
+}
+
+.button-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  min-width: 200px;
+  background-color: var(--alt-logo-color);
+  color: var(--primary-white-color);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
 /* Section Advantages */
