@@ -297,9 +297,19 @@ a,
   cursor: pointer;
 }
 
+.close-button .icon {
+  fill: #000;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:focus .icon,
+.close-button:hover .icon {
+  fill: #2196f3;
+}
+
 .form-order {
   width: 448px;
-  /* outline: 1px solid green; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -320,13 +330,30 @@ a,
 }
 
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
-  /* outline: 1px solid tomato; */
 }
 
 .form-field:not(:last-child) {
   margin-bottom: 28px;
+}
+
+.form-field .icon {
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  top: 70%;
+  fill: var(--primary-title-color);
+
+  transform: translateY(-70%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-area:focus + .icon,
+.input-area:hover + .icon {
+  fill: #2196f3;
 }
 
 .input-label {
@@ -345,6 +372,9 @@ a,
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-area:hover,
@@ -358,6 +388,9 @@ a,
 .input-area.textarea {
   height: 120px;
   padding: 12px 16px;
+}
+
+.input-area.textarea::placeholder {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.16;
@@ -382,6 +415,12 @@ textarea {
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
+}
+
+.checkbox-policy input[type='checkbox'] {
+  width: 16px;
+  height: 15px;
+  border-color: var(--primary-title-color);
 }
 
 .policy-text {
