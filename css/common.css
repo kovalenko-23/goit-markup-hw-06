@@ -241,6 +241,7 @@ a,
   color: var(--primary-title-color);
 }
 
+/* BACKDROP */
 .backdrop {
   position: fixed;
   top: 0;
@@ -263,11 +264,11 @@ a,
   transform: translate(-50%, -50%) scale(0.9);
 }
 
+/* MODAL */
 .modal {
   position: absolute;
   max-width: 100%;
-  /* width: 100%; */
-  /* min-height: 100vh; */
+  max-height: 100vh;
   left: 50%;
   top: 50%;
   overflow-y: auto;
